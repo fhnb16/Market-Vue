@@ -90,7 +90,7 @@ export default {
 }
 .stories_wrapper .story .story-preview-text {
   position: absolute;
-  height: 36px;
+  min-height: 36px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -108,8 +108,5 @@ export default {
   line-height: 120%;
   font-family: var(--text-font-rich), sans-serif;
   z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 }
 </style>

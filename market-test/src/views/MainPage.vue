@@ -25,6 +25,15 @@ onBeforeMount(() => {
 onMounted(() => {
   console.clear();
 });
+document.addEventListener(
+  "touchmove",
+  function (event) {
+    if (event.scale !== 1) {
+      event.preventDefault();
+    }
+  },
+  false
+);
 </script>
 
 <template>
@@ -191,7 +200,7 @@ h1 {
   line-height: 117%;
   font-family: var(--text-font-rich), sans-serif;
   color: var(--color-black);
-  margin-top: 36px;
+  margin-top: 24px;
   margin-bottom: 28px;
   margin-left: 20px;
 }

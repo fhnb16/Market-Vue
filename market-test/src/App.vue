@@ -118,4 +118,8 @@ export default {
 
 #app {
 }
+
+body {
+  touch-action: pan-x pan-y;
+}
 </style>
