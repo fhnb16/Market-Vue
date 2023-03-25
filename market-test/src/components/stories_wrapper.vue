@@ -1,6 +1,7 @@
 <script type="text/javascript" setup>
 import StoriesItem from "./stories_item.vue";
 import StoriesView from "./stories_view.vue";
+import { mapActions } from "vuex";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import StoriesView from "./stories_view.vue";
       v-for="(story, index) in stories"
       :key="'story-' + index"
       v-bind:story="story"
+      v-on:click="setActiveStory(index + 1)"
     />
     <StoriesView v-bind:stories="stories" />
   </div>
@@ -18,6 +20,9 @@ import StoriesView from "./stories_view.vue";
 export default {
   props: {
     stories: Array,
+  },
+  methods: {
+    ...mapActions(["setActiveStory"]),
   },
 };
 </script>

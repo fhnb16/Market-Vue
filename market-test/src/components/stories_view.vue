@@ -1,5 +1,17 @@
+<script type="text/javascript" setup>
+import Button from "./button_component.vue";
+import { computed } from "vue";
+import { useStore, mapActions } from "vuex";
+
+const store = useStore();
+
+const activeStory = computed(() => {
+  return store.state.activeStory;
+});
+</script>
+
 <template>
-  <div class="stories-view-wrapper" v-if="false">
+  <div class="stories-view-wrapper" v-if="activeStory > 0">
     <div class="stories-state">
       <div class="stories-state-item"><span style="width: 100%"></span></div>
       <div class="stories-state-item"><span style="width: 64%"></span></div>
@@ -8,7 +20,7 @@
     </div>
     <div class="modal-header">
       <span>Стройка через приложение</span>
-      <div class="modal-close">Close</div>
+      <div class="modal-close" v-on:click="setActiveStory(0)">Close</div>
     </div>
     <div class="stories-item-content">
       <img
@@ -17,12 +29,21 @@
       />
     </div>
     <div class="stories-item-button">
-      <div class="button section-round">Перейти</div>
+      <Button class="section-round">Перейти</Button>
     </div>
   </div>
 </template>
 
-<script type="text/javascript"></script>
+<script type="text/javascript">
+export default {
+  props: {
+    story: Object,
+  },
+  methods: {
+    ...mapActions(["setActiveStory"]),
+  },
+};
+</script>
 
 <style scoped type="text/css">
 /*////////////////////
