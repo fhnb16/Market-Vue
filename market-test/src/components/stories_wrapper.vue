@@ -5,10 +5,22 @@ import StoriesView from "./stories_view.vue";
 
 <template>
   <div class="stories_wrapper">
-    <StoriesItem />
-    <StoriesView />
+    <StoriesItem
+      v-for="(story, index) in stories"
+      :key="'story-' + index"
+      v-bind:story="story"
+    />
+    <StoriesView v-bind:stories="stories" />
   </div>
 </template>
+
+<script type="text/javascript">
+export default {
+  props: {
+    stories: Array,
+  },
+};
+</script>
 
 <style scoped type="text/css">
 /*////////////////////

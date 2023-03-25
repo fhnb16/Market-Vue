@@ -1,18 +1,48 @@
 <script type="text/javascript" setup>
+import { onBeforeMount, onMounted, computed } from "vue";
+import { useStore } from "vuex";
+
 import StoriesWrapper from "../components/stories_wrapper.vue";
 import Button from "../components/button_component.vue";
 import Section from "../components/section_component.vue";
+
+const store = useStore();
+/*const getContent = computed(() => {
+  return store.getters.getContent;
+});
+const getStories = computed(() => {
+  return store.getters.getStories;
+});*/
+const content = computed(() => {
+  return store.state.content;
+});
+const stories = computed(() => {
+  return store.state.stories;
+});
+onBeforeMount(() => {
+  store.dispatch("fetchContent");
+});
+onMounted(() => {
+  console.clear();
+});
 </script>
 
 <template>
   <div class="app-wrapper" id="app-wrapper">
-    <h1 class="logo">ИЖС Маркет</h1>
-    <StoriesWrapper />
+    <h1 class="logo">
+      {{ content["appTitle"] }}
+    </h1>
+    <StoriesWrapper v-bind:stories="stories" />
     <Button class="button-arrow center">
-      Есть смета? Пришлите её нам и сделаем ещё выгоднее
+      {{ content.mainPageButton["buttonText"] }}
     </Button>
     <div class="sections">
-      <Section />
+      <Section
+        v-for="(section, index) in content.sections"
+        :key="'section-' + index"
+        v-bind:section="section"
+        v-bind:index="index"
+      />
     </div>
     <span class="break"></span>
     <nav class="fixed-bottom-menu">
@@ -391,15 +421,9 @@ nav.fixed-bottom-menu > .menu-item:active * {
 ////////////////////*/
 
 @media (min-width: 1200px) {
-  section .section-wrapper {
-    width: 338px;
-  }
   .sections {
     display: flex;
     flex-direction: row;
-  }
-  .button {
-    max-width: 600px;
   }
   .logo {
     transition: var(--transition-default);
@@ -411,16 +435,9 @@ nav.fixed-bottom-menu > .menu-item:active * {
     right: 20%;
     max-width: 420px;
     margin: 0 auto;
-    display: ;
   }
   nav.fixed-bottom-menu {
     justify-content: center;
-  }
-}
-
-@media (max-width: 350px) {
-  section .section-wrapper {
-    width: unset;
   }
 }
 </style>

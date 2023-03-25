@@ -86,4 +86,14 @@
 .button.button-arrow:active:after {
   transform: translateX(-2px);
 }
+
+/*////////////////////
+  media screen width
+////////////////////*/
+
+@media (min-width: 1200px) {
+  .button {
+    max-width: 600px;
+  }
+}
 </style>

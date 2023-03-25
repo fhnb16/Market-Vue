@@ -4,16 +4,27 @@ import Button from "./button_component.vue";
 
 <template>
   <section>
-    <h2><span class="section-number">3</span> Создать красоту</h2>
+    <h2>
+      <span class="section-number"> {{ index + 1 }} </span>
+      {{ section["sectionText"] }}
+    </h2>
     <div class="section-wrapper">
-      <img
-        src="https://sun9-73.userapi.com/impg/KiqFXvJzlI4AJYCLa9GojK5Mg_g3rfdnEmZ30w/HX83kUQHPwE.jpg?size=1280x1063&quality=95&sign=15cb6f042dfc76e10f50c2a22a7c3182&type=album"
-        class="section-wrapper-img"
-      />
-      <Button class="section-round">Создать красоту</Button>
+      <img v-bind:src="section.sectionImage" class="section-wrapper-img" />
+      <Button class="section-round">
+        {{ section["sectionText"] }}
+      </Button>
     </div>
   </section>
 </template>
+
+<script type="text/javascript">
+export default {
+  props: {
+    section: Object,
+    index: Number,
+  },
+};
+</script>
 
 <style scoped type="text/css">
 /*////////////////////
@@ -67,5 +78,21 @@ section .section-wrapper .button {
   right: 20px;
   bottom: 20px;
   position: absolute;
+}
+
+/*////////////////////
+  media screen width
+////////////////////*/
+
+@media (min-width: 1200px) {
+  section .section-wrapper {
+    width: 338px;
+  }
+}
+
+@media (max-width: 350px) {
+  section .section-wrapper {
+    width: unset;
+  }
 }
 </style>

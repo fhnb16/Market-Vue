@@ -1,0 +1,89 @@
+{
+  "appTitle": "ИЖС маркет",
+  "stories": [
+    {
+      "iconPreviewImage": "https://sun9-78.userapi.com/impg/-dby_glonaJ__E4PkMzZGacFNtxGqld-ego0Fw/B7lmLlc0_eY.jpg?size=810x1080&quality=96&sign=a7149fea93ea52ee8226b4ac9e1bffc9&type=album",
+      "iconText": "Стройка через приложение",
+      "storyText": "Стройка через приложение",
+      "storyMedia": "",
+      "storyMediaType": "",
+      "storyMediaFit": "",
+      "storyShowSeconds": "0",
+      "buttonText": "Перейти",
+      "buttonAction": "#",
+      "storyViewed": false
+    },
+    {
+      "iconPreviewImage": "https://psv4.userapi.com/c235031/u590763794/docs/d26/070cde08072f/SereneAchingAtlanticbluetang-size_restricted.gif?extra=qBCPx5W-lhz31rr1FaumTSJMVhxPrdquInlZ80M5EfBlpXRWIRQpH2kGYHEADOhn4R8WQm-Iu3-aaLxIJd9qsG3L5PpZ7sD-Mm13Sa6y-DJYZyBUey9p_hPGQI-tU9gPPoLXoiKpbWprK5MlwFaEkss",
+      "iconText": "Почему все цены с датой?",
+      "storyText": "Почему все цены с датой?",
+      "storyMedia": "",
+      "storyMediaType": "",
+      "storyMediaFit": "",
+      "storyShowSeconds": "0",
+      "buttonText": "Перейти",
+      "buttonAction": "#",
+      "storyViewed": false
+    },
+    {
+      "iconPreviewImage": "https://sun9-73.userapi.com/impg/XcCJbfRalC32ak38YMsr-RnQ1WR4WOClnLQ-Ig/mVSBlJkSscc.jpg?size=1280x997&quality=95&sign=e1742393d9c80f6165260533f2807045&type=album",
+      "iconText": "Красота на вашем участке",
+      "storyText": "Красота на вашем участке",
+      "storyMedia": "",
+      "storyMediaType": "",
+      "storyMediaFit": "",
+      "storyShowSeconds": "0",
+      "buttonText": "Перейти",
+      "buttonAction": "#",
+      "storyViewed": false
+    },
+    {
+      "iconPreviewImage": "https://sun9-29.userapi.com/impg/Xbd3wUH1wDYlBEJWIgp3h83b5U16pj5pNgpzsQ/Yd7Ufn5wy1I.jpg?size=1024x1024&quality=95&sign=41c848c0e16ff94956b394eb4651c967&type=album",
+      "iconText": "С ИЖС выгоднее на миллионы!",
+      "storyText": "С ИЖС выгоднее на миллионы!",
+      "storyMedia": "",
+      "storyMediaType": "",
+      "storyMediaFit": "",
+      "storyShowSeconds": "0",
+      "buttonText": "Перейти",
+      "buttonAction": "#",
+      "storyViewed": false
+    },
+    {
+      "iconPreviewImage": "https://psv4.userapi.com/c404326/u108139953/docs/2b76688ffcd3/gachi.gif?extra=dVWxY8l7v7bInNI2_KVpKejdlroDYnvuMRVZS1Whvsiw-KhnuYmP3oS-1_uEibXbZofYmc43lfQ-spLZq_MBAGluJxv3ctFNf3MS3WhbDqpkoTZk-tF-4j4XbWahDd-wskwEb5XQLDpHK9rVPlhg1xhs",
+      "iconText": "Hello World, Fuzz Buzz, Foo Bar",
+      "storyText": "Hello World, Fuzz Buzz, Foo Bar",
+      "storyMedia": "",
+      "storyMediaType": "",
+      "storyMediaFit": "",
+      "storyShowSeconds": "0",
+      "buttonText": "Перейти",
+      "buttonAction": "#",
+      "storyViewed": false
+    }
+  ],
+  "mainPageButton": {
+    "buttonText": "Есть смета? Пришлите ее нам и сделаем еще выгоднее",
+    "buttonAction": "#"
+  },
+  "sections": [
+    {
+      "sectionImage": "https://sun9-5.userapi.com/impg/tTKcqKa3T5AXycf4OE3677wVRpTANrJg6uhXJQ/kF7VrPkLWC8.jpg?size=865x1080&quality=95&sign=709f2ea38d3107ecdf351bd14c5c7025&type=album",
+      "sectionText": "Выбрать дом",
+      "buttonText": "Выбрать дом",
+      "buttonAction": "#"
+    },
+    {
+      "sectionImage": "https://sun9-58.userapi.com/impg/DrwaX2n_EdFtsxe1voIijxxhmBRwvNNIkpOCKg/MWWSUGIHnKg.jpg?size=607x1080&quality=95&sign=9a04237a886babcf6cc8c60dd7f35b28&type=album",
+      "sectionText": "Следить за стройкой",
+      "buttonText": "Следить за стройкой",
+      "buttonAction": "#"
+    },
+    {
+      "sectionImage": "https://sun9-73.userapi.com/impg/KiqFXvJzlI4AJYCLa9GojK5Mg_g3rfdnEmZ30w/HX83kUQHPwE.jpg?size=1280x1063&quality=95&sign=15cb6f042dfc76e10f50c2a22a7c3182&type=album",
+      "sectionText": "Создать красоту",
+      "buttonText": "Создать красоту",
+      "buttonAction": "#"
+    }
+  ]
+}

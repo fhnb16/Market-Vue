@@ -1,14 +1,19 @@
 <template>
-  <div class="story viewed">
-    <img
-      src="https://psv4.userapi.com/c235031/u590763794/docs/d26/070cde08072f/SereneAchingAtlanticbluetang-size_restricted.gif?extra=qBCPx5W-lhz31rr1FaumTSJMVhxPrdquInlZ80M5EfBlpXRWIRQpH2kGYHEADOhn4R8WQm-Iu3-aaLxIJd9qsG3L5PpZ7sD-Mm13Sa6y-DJYZyBUey9p_hPGQI-tU9gPPoLXoiKpbWprK5MlwFaEkss"
-      class="story-preview-img"
-    />
-    <div class="story-preview-text">Почему все цены с датой?</div>
+  <div class="story" v-bind:class="story.storyViewed ? 'viewed' : ''">
+    <img v-bind:src="story.iconPreviewImage" class="story-preview-img" />
+    <div class="story-preview-text">
+      {{ story.iconText }}
+    </div>
   </div>
 </template>
 
-<script type="text/javascript"></script>
+<script type="text/javascript">
+export default {
+  props: {
+    story: Object,
+  },
+};
+</script>
 
 <style scoped type="text/css">
 /*////////////////////
