@@ -1,84 +1,18 @@
+<script type="text/javascript" setup>
+import StoriesWrapper from "../components/stories_wrapper.vue";
+import Button from "../components/button_component.vue";
+import Section from "../components/section_component.vue";
+</script>
+
 <template>
   <div class="app-wrapper" id="app-wrapper">
     <h1 class="logo">ИЖС Маркет</h1>
-    <div class="stories_wrapper">
-      <div class="story">
-        <img
-          src="https://sun9-78.userapi.com/impg/-dby_glonaJ__E4PkMzZGacFNtxGqld-ego0Fw/B7lmLlc0_eY.jpg?size=810x1080&quality=96&sign=a7149fea93ea52ee8226b4ac9e1bffc9&type=album"
-          class="story-preview-img"
-        />
-        <div class="story-preview-text">Стройка через приложение</div>
-      </div>
-      <div class="story viewed">
-        <img
-          src="https://psv4.userapi.com/c235031/u590763794/docs/d26/070cde08072f/SereneAchingAtlanticbluetang-size_restricted.gif?extra=qBCPx5W-lhz31rr1FaumTSJMVhxPrdquInlZ80M5EfBlpXRWIRQpH2kGYHEADOhn4R8WQm-Iu3-aaLxIJd9qsG3L5PpZ7sD-Mm13Sa6y-DJYZyBUey9p_hPGQI-tU9gPPoLXoiKpbWprK5MlwFaEkss"
-          class="story-preview-img"
-        />
-        <div class="story-preview-text">Почему все цены с датой?</div>
-      </div>
-      <div class="story">
-        <img
-          src="https://sun9-29.userapi.com/impg/Xbd3wUH1wDYlBEJWIgp3h83b5U16pj5pNgpzsQ/Yd7Ufn5wy1I.jpg?size=1024x1024&quality=95&sign=41c848c0e16ff94956b394eb4651c967&type=album"
-          class="story-preview-img"
-        />
-        <div class="story-preview-text">С ИЖС выгоднее на миллионы!</div>
-      </div>
-      <div class="story">
-        <img
-          src="https://sun9-73.userapi.com/impg/XcCJbfRalC32ak38YMsr-RnQ1WR4WOClnLQ-Ig/mVSBlJkSscc.jpg?size=1280x997&quality=95&sign=e1742393d9c80f6165260533f2807045&type=album"
-          class="story-preview-img"
-        />
-        <div class="story-preview-text">Красота на Вашем участке</div>
-      </div>
-      <div class="story">
-        <img
-          src="https://sun9-65.userapi.com/impg/Sq2mN-1uCUwW3BNeXkgglC7UDlIfqpTX9znTFQ/KOkyQRzRb4c.jpg?size=631x633&quality=96&sign=2964332e4589137f7a1aa478d18949a8&type=album"
-          class="story-preview-img"
-        />
-        <div class="story-preview-text">Hello World, Fuzz Buzz, Foo Bar</div>
-      </div>
-      <div class="story">
-        <img
-          src="https://psv4.userapi.com/c404326/u108139953/docs/2b76688ffcd3/gachi.gif?extra=dVWxY8l7v7bInNI2_KVpKejdlroDYnvuMRVZS1Whvsiw-KhnuYmP3oS-1_uEibXbZofYmc43lfQ-spLZq_MBAGluJxv3ctFNf3MS3WhbDqpkoTZk-tF-4j4XbWahDd-wskwEb5XQLDpHK9rVPlhg1xhs"
-          class="story-preview-img"
-        />
-        <div class="story-preview-text">Lorem Ipsum</div>
-      </div>
-    </div>
-    <div class="button button-arrow center">
+    <StoriesWrapper />
+    <Button class="button-arrow center">
       Есть смета? Пришлите её нам и сделаем ещё выгоднее
-    </div>
+    </Button>
     <div class="sections">
-      <section>
-        <h2><span class="section-number">1</span> Выбрать дом</h2>
-        <div class="section-wrapper">
-          <img
-            src="https://sun9-5.userapi.com/impg/tTKcqKa3T5AXycf4OE3677wVRpTANrJg6uhXJQ/kF7VrPkLWC8.jpg?size=865x1080&quality=95&sign=709f2ea38d3107ecdf351bd14c5c7025&type=album"
-            class="section-wrapper-img"
-          />
-          <div class="button section-round">Выбрать дом</div>
-        </div>
-      </section>
-      <section>
-        <h2><span class="section-number">2</span> Следить за стройкой</h2>
-        <div class="section-wrapper">
-          <img
-            src="https://sun9-58.userapi.com/impg/DrwaX2n_EdFtsxe1voIijxxhmBRwvNNIkpOCKg/MWWSUGIHnKg.jpg?size=607x1080&quality=95&sign=9a04237a886babcf6cc8c60dd7f35b28&type=album"
-            class="section-wrapper-img"
-          />
-          <div class="button section-round">Следить за стройкой</div>
-        </div>
-      </section>
-      <section>
-        <h2><span class="section-number">3</span> Создать красоту</h2>
-        <div class="section-wrapper">
-          <img
-            src="https://sun9-73.userapi.com/impg/KiqFXvJzlI4AJYCLa9GojK5Mg_g3rfdnEmZ30w/HX83kUQHPwE.jpg?size=1280x1063&quality=95&sign=15cb6f042dfc76e10f50c2a22a7c3182&type=album"
-            class="section-wrapper-img"
-          />
-          <div class="button section-round">Создать красоту</div>
-        </div>
-      </section>
+      <Section />
     </div>
     <span class="break"></span>
     <nav class="fixed-bottom-menu">
@@ -188,34 +122,11 @@
         </ul>
       </div>
     </div>
-    <div class="stories-view-wrapper" v-if="false">
-      <div class="stories-state">
-        <div class="stories-state-item"><span style="width: 100%"></span></div>
-        <div class="stories-state-item"><span style="width: 64%"></span></div>
-        <div class="stories-state-item"><span style="width: 0%"></span></div>
-        <div class="stories-state-item"><span style="width: 0%"></span></div>
-      </div>
-      <div class="modal-header">
-        <span>Стройка через приложение</span>
-        <div class="modal-close">Close</div>
-      </div>
-      <div class="stories-item-content">
-        <img
-          src="https://psv4.userapi.com/c536236/u73825013/docs/d17/d7bfb6c7d9b9/VortexTunnelTardis2.gif?extra=qZXlUqo0p2zKVE-Gjm6e5OENk08wlaFkFsqLpVsDRAWgtGxrfFS47u9HPnzmcr46Bq8gH5B8ZCehqaI5YsrlcTS6W34ZglltFX-w4n5m3G02FQEpXuujn36bZg8wxaSgHO_ZB-By4iqcRnO9cTjUuUjC"
-          style="object-fit: cover"
-        />
-      </div>
-      <div class="stories-item-button">
-        <div class="button section-round">Перейти</div>
-      </div>
-    </div>
     <div class="background-blur"></div>
   </div>
 </template>
 
-<script type="text/javascript"></script>
-
-<style scoped>
+<style type="text/css">
 /*////////////////////
         basics
 ////////////////////*/
@@ -280,248 +191,12 @@ span.break:before {
 }
 
 /*////////////////////
-        stories
-////////////////////*/
-
-.stories_wrapper {
-  width: 100%;
-  display: block;
-  overflow: auto;
-  overflow: overlay;
-  white-space: nowrap;
-  padding-bottom: 6px;
-  display: inline-block;
-  text-align: center;
-}
-.stories_wrapper .story {
-  position: relative;
-  display: inline-block;
-  width: 126px;
-  height: 126px;
-  border: 2px solid var(--color-white);
-  border-radius: 20px;
-  margin: 6px;
-  padding: 8px;
-  cursor: pointer;
-}
-.stories_wrapper .story,
-.stories_wrapper .story *,
-.stories_wrapper .story:after {
-  transition: var(--transition-default);
-}
-.stories_wrapper .story:hover {
-  transform: translateY(-2px);
-}
-.stories_wrapper .story:active {
-  transform: translateY(1px);
-}
-.stories_wrapper .story:hover .story-preview-text,
-.stories_wrapper .story:active .story-preview-text {
-  background: rgba(0, 0, 0, 0.64);
-  backdrop-filter: blur(8px);
-  -moz-backdrop-filter: blur(8px);
-}
-.stories_wrapper .story:first-child {
-  margin-left: 20px;
-}
-.stories_wrapper .story:last-child {
-  margin-right: 20px;
-}
-.stories_wrapper .story:before {
-  content: "";
-  position: absolute;
-  border-radius: 24px;
-  left: -4px;
-  top: -4px;
-  width: 130px;
-  height: 130px;
-  border: 2px solid var(--color-blue);
-  z-index: 6;
-}
-.stories_wrapper .story.viewed:before {
-  border: 2px solid var(--color-gray);
-}
-.stories_wrapper .story:after {
-  content: "";
-  position: absolute;
-  border-radius: 22px;
-  left: -2px;
-  top: -2px;
-  width: 126px;
-  height: 126px;
-  border: 2px solid var(--color-white);
-  z-index: 6;
-}
-.stories_wrapper .story .story-preview-img {
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-  border-radius: 20px;
-  object-fit: cover;
-}
-.stories_wrapper .story .story-preview-text {
-  position: absolute;
-  height: 36px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 4px 8px 8px 8px;
-  backdrop-filter: blur(6px);
-  -moz-backdrop-filter: blur(6px);
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 20px;
-  color: var(--color-white);
-  white-space: break-spaces;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-weight: 700;
-  font-size: 10px;
-  line-height: 120%;
-  font-family: var(--text-font-rich), sans-serif;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-/*////////////////////
-        buttons
-////////////////////*/
-
-.button {
-  padding: 12px;
-  font-family: var(--text-font-rich), sans-serif;
-  background-color: var(--color-white);
-  color: var(--color-black);
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  max-width: 360px;
-  width: calc(100% - 40px);
-  margin: 6px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 129%;
-  position: relative;
-  cursor: pointer;
-}
-
-.button,
-.button *,
-.button:after {
-  transition: all 150ms ease-in-out;
-}
-
-.button.center {
-  margin: 12px auto;
-}
-
-.button.section-round {
-  padding: 16px;
-  border-radius: 60px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.button.section-round:hover,
-.button.section-round:active {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2),
-    inset 0 0px 4px rgba(0, 0, 0, 0.2);
-}
-
-.button.section-round:active {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3), inset 0 0px 8px rgba(0, 0, 0, 0.3);
-}
-
-.button:hover,
-.button:active {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.button:active {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.button.button-arrow {
-  padding-right: 34px;
-}
-
-.button.button-arrow:after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath d='M246.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 41.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z' fill='rgba(0, 0, 0, 0.35)'/%3E%3C/svg%3E");
-  right: 20px;
-  top: calc(50% - 10px);
-}
-
-.button.button-arrow:hover:after {
-  transform: translateX(4px);
-}
-
-.button.button-arrow:active:after {
-  transform: translateX(-2px);
-}
-
-/*////////////////////
-        section
+        sections
 ////////////////////*/
 
 .sections {
   display: flex;
   flex-direction: column;
-}
-
-section {
-  max-width: 420px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 6px;
-}
-
-section .section-number {
-  font-family: "Space Mono", monospace;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 50%;
-  color: var(--color-white);
-  background-color: var(--color-black);
-  width: 24px;
-  height: 24px;
-  padding: 1px 6px 3px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 111%;
-  text-align: center;
-  margin-right: 14px;
-}
-
-section .section-wrapper {
-  position: relative;
-  margin: 0 auto;
-  border-radius: 26px;
-  width: 335px;
-}
-
-section .section-wrapper .section-wrapper-img {
-  width: 100%;
-  height: 338px;
-  border-radius: 24px;
-  object-fit: cover;
-}
-
-section .section-wrapper .button {
-  margin: 0 auto;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  position: absolute;
 }
 
 /*////////////////////
@@ -709,117 +384,6 @@ nav.fixed-bottom-menu > .menu-item:active * {
 
 .modal-contact .modal-body ul > li:active {
   box-shadow: inset 0 2px 16px rgba(0, 0, 0, 0.1);
-}
-
-/*////////////////////
-     stories view
-////////////////////*/
-
-.stories-view-wrapper {
-  position: fixed;
-  inset: 0;
-  background: rgba(128, 128, 128, 0.9);
-  background-color: var(--color-purple);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.stories-view-wrapper .modal-header {
-  margin-top: 16px;
-  font-family: var(--text-font-rich), sans-serif;
-  color: var(--color-white);
-  display: flex;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.stories-view-wrapper .modal-header span {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 129%;
-  padding: 2px 4px;
-  background: rgba(0, 0, 0, 0.24);
-  backdrop-filter: blur(12px);
-  -moz-backdrop-filter: blur(12px);
-  margin-left: 20px;
-  border-radius: 4px;
-  max-width: 75%;
-  overflow: hidden;
-}
-
-.stories-view-wrapper .modal-header .modal-close {
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 28C22.5647 28 28 22.5529 28 16C28 9.43529 22.5529 4 15.9882 4C9.43529 4 4 9.43529 4 16C4 22.5529 9.44706 28 16 28ZM12.0471 20.9412C11.5059 20.9412 11.0824 20.5059 11.0824 19.9647C11.0824 19.7059 11.1765 19.4588 11.3647 19.2824L14.6235 16.0118L11.3647 12.7529C11.1765 12.5647 11.0824 12.3294 11.0824 12.0706C11.0824 11.5176 11.5059 11.1059 12.0471 11.1059C12.3176 11.1059 12.5294 11.2 12.7176 11.3765L16 14.6471L19.3059 11.3647C19.5059 11.1647 19.7176 11.0824 19.9765 11.0824C20.5176 11.0824 20.9529 11.5059 20.9529 12.0471C20.9529 12.3176 20.8706 12.5294 20.6588 12.7412L17.3882 16.0118L20.6471 19.2706C20.8471 19.4471 20.9412 19.6941 20.9412 19.9647C20.9412 20.5059 20.5059 20.9412 19.9529 20.9412C19.6824 20.9412 19.4353 20.8471 19.2588 20.6588L16 17.3882L12.7529 20.6588C12.5647 20.8471 12.3176 20.9412 12.0471 20.9412Z' fill='%23ffffff' fill-opacity='0.6'/%3E%3C/svg%3E%0A");
-}
-
-.stories-view-wrapper .modal-header .modal-close:hover {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.stories-state {
-  position: absolute;
-  top: 0;
-  padding-top: 20px;
-  left: 0;
-  padding-left: 20px;
-  right: 0;
-  padding-right: 20px;
-  height: 4px;
-  display: flex;
-  height: 80px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0) 95.24%,
-    rgba(0, 0, 0, 0) 95.24%
-  );
-}
-
-.stories-state-item {
-  background: rgba(255, 255, 255, 0.3);
-  height: 4px;
-  margin-left: 2px;
-  margin-right: 2px;
-  border-radius: 8px;
-  flex: 1;
-}
-
-.stories-state-item > span {
-  display: block;
-  height: 100%;
-  background-color: var(--color-white);
-  position: relative;
-  overflow: hidden;
-  width: 0;
-  border-radius: 6px;
-}
-
-.stories-item-content {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  height: 100%;
-}
-
-.stories-item-content img,
-.stories-item-content video {
-  width: 100%;
-  /*max-height: 448px;*/
-  object-fit: contain;
-  height: 100%;
-}
-
-.stories-item-button {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 20px;
 }
 
 /*////////////////////

@@ -1,0 +1,29 @@
+{
+  "appTitle": "ИЖС маркет",
+  "stories": [
+    {
+      "iconPreview": "",
+      "iconText": "",
+      "storyText": "",
+      "storyMedia": "",
+      "storyMediaType": "",
+      "storyMediaFit": "",
+      "storyShowSeconds": "",
+      "buttonText": "Перейти",
+      "buttonAction": "",
+      "storyViewed": false
+    }
+  ],
+  "mainPageButton": {
+    "buttonText": "",
+    "buttonAction": ""
+  },
+  "sections": [
+    {
+      "sectionImage": "",
+      "sectionText": "",
+      "buttonText": "",
+      "buttonAction": ""
+    }
+  ]
+}

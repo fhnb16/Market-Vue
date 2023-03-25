@@ -13,7 +13,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" type="text/css">
 * {
   box-sizing: border-box;
   color: inherit;
@@ -79,6 +79,7 @@ export default {
 }
 :root {
   --text-font-rich: "ALS Gorizont Variable";
+  --text-font-monospace: "Space Mono";
   --transition-default: all 100ms ease-out;
   --color-blue: #1f75fe;
   --color-gray: #c4c8cc;

@@ -1,0 +1,71 @@
+<script type="text/javascript" setup>
+import Button from "./button_component.vue";
+</script>
+
+<template>
+  <section>
+    <h2><span class="section-number">3</span> Создать красоту</h2>
+    <div class="section-wrapper">
+      <img
+        src="https://sun9-73.userapi.com/impg/KiqFXvJzlI4AJYCLa9GojK5Mg_g3rfdnEmZ30w/HX83kUQHPwE.jpg?size=1280x1063&quality=95&sign=15cb6f042dfc76e10f50c2a22a7c3182&type=album"
+        class="section-wrapper-img"
+      />
+      <Button class="section-round">Создать красоту</Button>
+    </div>
+  </section>
+</template>
+
+<style scoped type="text/css">
+/*////////////////////
+        section
+////////////////////*/
+
+section {
+  max-width: 420px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 6px;
+}
+
+section .section-number {
+  font-family: var(--text-font-monospace), monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  width: 24px;
+  height: 24px;
+  padding: 1px 6px 3px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 111%;
+  text-align: center;
+  margin-right: 14px;
+}
+
+section .section-wrapper {
+  position: relative;
+  margin: 0 auto;
+  border-radius: 26px;
+  width: 335px;
+}
+
+section .section-wrapper .section-wrapper-img {
+  width: 100%;
+  height: 338px;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+section .section-wrapper .button {
+  margin: 0 auto;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+}
+</style>
