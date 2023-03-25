@@ -49,7 +49,7 @@ section .section-number {
   background-color: var(--color-black);
   width: 24px;
   height: 24px;
-  padding: 1px 6px 3px;
+  padding: 2px 6px 3px;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;

@@ -110,7 +110,7 @@ export default {
 
 @font-face {
   font-family: "ALS Gorizont Variable";
-  src: url("https://dev.fhnb.ru/assets/?page=view&dir=Fonts&name=ALSGorizontGX.ttf")
+  src: url("https://dev.fhnb.ru/assets/Fonts/ALSGorizontGX.ttf")
     format("truetype");
 }
 
