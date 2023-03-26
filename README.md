@@ -36,7 +36,8 @@
   4. Separated to components
   5. Store data in Vuex
   6. Can be pinned on ios home screen (PWA)
-  7. Wow, ArtLebedev font))0
+  7. Stories can contain image or video
+  8. Wow, ArtLebedev font))0
 
 ---
 
