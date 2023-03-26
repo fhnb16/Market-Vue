@@ -219,7 +219,7 @@ export default {
   margin-left: 20px;
   border-radius: 4px;
   max-width: 75%;
-  white-space: nowrap;
+  white-space: break-spaces;
   overflow-wrap: break-word;
   text-overflow: ellipsis;
   overflow: hidden;
