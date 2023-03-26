@@ -225,6 +225,7 @@ export default {
   top: 0;
   bottom: 0;
   width: 100px;
+  width: 45%;
 }
 
 .stories-navigate.left {
