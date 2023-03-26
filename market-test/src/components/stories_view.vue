@@ -77,7 +77,6 @@ function storyCounterProgress(index) {
       stories.value[activeStory.value].storyShowSeconds == -1
     ) {
       let mapProgress = toPercents(5 + 0.3 - timer.seconds.value, 5);
-      console.log("width: " + mapProgress + "%");
       return "width: " + mapProgress + "%";
     } else {
       let mapProgress = toPercents(
@@ -86,7 +85,6 @@ function storyCounterProgress(index) {
           timer.seconds.value,
         stories.value[activeStory.value].storyShowSeconds
       );
-      console.log("width: " + mapProgress + "%");
       return "width: " + mapProgress + "%";
     }
   }
@@ -272,7 +270,7 @@ export default {
   overflow: hidden;
   width: 0;
   border-radius: 6px;
-  transition: all 256ms ease;
+  transition: all 1s ease;
 }
 
 .stories-item-content {
