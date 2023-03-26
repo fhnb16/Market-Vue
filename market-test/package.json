@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "vue": "^3.2.13",
+    "vue-timer-hook": "^1.0.66",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

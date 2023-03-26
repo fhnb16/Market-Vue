@@ -1,7 +1,8 @@
 <script type="text/javascript" setup>
 import Button from "./button_component.vue";
-import { computed } from "vue";
+import { computed, watch, watchEffect, onMounted } from "vue";
 import { useStore, mapActions } from "vuex";
+import { useTimer } from "vue-timer-hook";
 
 const store = useStore();
 
@@ -21,6 +22,74 @@ const storyFit = computed(() => {
     return store.state.stories[store.state.activeStory].storyMediaFit;
   }
 });
+
+const time = new Date();
+time.setSeconds(time.getSeconds() + 5); // 5 seconds timer
+const timer = useTimer(time, false);
+
+watch(activeStory, (value) => {
+  if (value >= store.state.stories.length) {
+    store.state.activeStory = -1;
+  }
+  if (value != store.state.stories.length && value != -1) {
+    const time = new Date();
+    if (
+      stories.value[activeStory.value].storyShowSeconds == undefined ||
+      stories.value[activeStory.value].storyShowSeconds == "" ||
+      stories.value[activeStory.value].storyShowSeconds == 0 ||
+      stories.value[activeStory.value].storyShowSeconds == "0"
+    ) {
+      time.setSeconds(time.getSeconds() + 5);
+    } else {
+      time.setSeconds(
+        time.getSeconds() +
+          stories.value[activeStory.value].storyShowSeconds.storyShowSeconds
+      );
+    }
+    timer.restart(time);
+  } else {
+    timer.pause();
+  }
+});
+
+onMounted(() => {
+  watchEffect(async () => {
+    if (timer.isExpired.value) {
+      store.dispatch("setViewedStory", activeStory.value + 1);
+      store.dispatch("setActiveStory", activeStory.value + 1);
+    }
+  });
+});
+
+function storyCounterProgress(index, activeStory) {
+  if (index > activeStory) {
+    return "width: 0%";
+  } else if (index < activeStory) {
+    return "width: 100%";
+  } else {
+    if (
+      stories.value[activeStory].storyShowSeconds == undefined ||
+      stories.value[activeStory].storyShowSeconds == "" ||
+      stories.value[activeStory].storyShowSeconds == 0 ||
+      stories.value[activeStory].storyShowSeconds == "0"
+    ) {
+      let mapProgress = toPercents(5 + 0.3 - timer.seconds.value, 5);
+      console.log("width: " + mapProgress + "%");
+      return "width: " + mapProgress + "%";
+    } else {
+      let mapProgress = toPercents(
+        stories.value[activeStory].storyShowSeconds + 0.3 - timer.seconds.value,
+        stories.value[activeStory].storyShowSeconds
+      );
+      console.log("width: " + mapProgress + "%");
+      return "width: " + mapProgress + "%";
+    }
+  }
+}
+
+function toPercents(x, y) {
+  return (x / y) * 100;
+}
 </script>
 
 <template>
@@ -60,6 +129,8 @@ const storyFit = computed(() => {
           v-bind:style="'object-fit: ' + storyFit"
           autoplay
           loop
+          playsinline
+          webkit-playsinline
         />
       </template>
     </div>
@@ -100,15 +171,6 @@ export default {
   },
   methods: {
     ...mapActions(["setActiveStory"]),
-    storyCounterProgress(index, activeStory) {
-      if (index > activeStory) {
-        return "width: 0%";
-      } else if (index < activeStory) {
-        return "width: 100%";
-      } else {
-        return "width: 50%";
-      }
-    },
   },
   computed: {},
 };
@@ -205,6 +267,7 @@ export default {
   overflow: hidden;
   width: 0;
   border-radius: 6px;
+  transition: all 256ms ease;
 }
 
 .stories-item-content {

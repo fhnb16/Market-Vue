@@ -5,18 +5,31 @@ export default createStore({
     content: {},
     stories: [],
     activeStory: -1,
+    timerCountdown: 0,
+    modalVisible: false,
   },
   getters: {
     getContent: (state) => state.content,
     getStories: (state) => state.stories,
     getActiveStory: (state) => state.activeStory,
+    getTimerCount: (state) => state.timerCountdown,
+    modalVisible: (state) => state.modalVisible,
   },
   actions: {
     setActiveStory({ commit }, activeStory) {
-      commit("SET_ACTIVE_STORY", activeStory);
+      if (activeStory < this.state.stories.length && activeStory > -1) {
+        commit("SET_ACTIVE_STORY", activeStory);
+      } else {
+        commit("SET_ACTIVE_STORY", -1);
+      }
     },
-    setViewedStory({ commit }, index) {
-      commit("SET_VIEWED_STORY", index);
+    setViewedStory({ commit }, activeStory) {
+      if (activeStory < this.state.stories.length && activeStory > -1) {
+        commit("SET_VIEWED_STORY", activeStory);
+      }
+    },
+    setModalVisibility({ commit }, modalVisibility) {
+      commit("SET_MODAL_VISIBILITY", modalVisibility);
     },
     async fetchContent({ commit }) {
       try {
@@ -48,6 +61,13 @@ export default createStore({
     },
     SET_VIEWED_STORY(state, index) {
       state.stories[index].storyViewed = true;
+    },
+    SET_MODAL_VISIBILITY(state, visibility) {
+      if (visibility) {
+        state.modalVisible = true;
+      } else {
+        state.modalVisible = false;
+      }
     },
   },
 });
