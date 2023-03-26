@@ -18,6 +18,7 @@
       "iconText": "Почему все цены с датой?",
       "storyText": "Почему все цены с датой?",
       "storyMedia": "https://test.fhnb.ru/market/api/sampleImages/VortexTunnelTardis2.mp4",
+      "storyMediaPoster": "https://test.fhnb.ru/market/api/sampleImages/VortexTunnelTardis2.jpg",
       "storyMediaType": "video",
       "storyMediaFit": "cover",
       "storyShowSeconds": 10,

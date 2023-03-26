@@ -134,6 +134,11 @@ function toPercents(x, y) {
           loop
           playsinline
           webkit-playsinline
+          v-bind:poster="
+            stories[activeStory].storyMediaPoster != undefined
+              ? stories[activeStory].storyMediaPoster
+              : ''
+          "
         />
       </template>
     </div>
