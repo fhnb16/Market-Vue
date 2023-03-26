@@ -50,7 +50,7 @@
       "iconText": "Стройка через приложение", // text string on story icon
       "storyText": "Стройка через приложение", // text string on top of story
       "storyMedia": "", // video or image file url
-      "storyMediaCover": "", url ti video cover image (shows before video loaded)
+      "storyMediaPoster": "", url ti video poster image (shows before video loaded)
       "storyMediaType": "image", // video/image, image by default
       "storyMediaFit": "contain", // contain - fit all image/video in center, cover - zoom image/video in center to fill all display width/height
       "storyShowSeconds": 0, // how long story is shown, 0 or empty is 5 seconds
