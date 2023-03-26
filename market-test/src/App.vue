@@ -88,6 +88,7 @@ export default {
   --color-gray-light: #f9f9f9;
   --color-gray-dark: #e0e0e0;
   --color-purple: #dcbef0;
+  --color-purple-light: #ccd3ff;
 }
 
 /*@font-face {

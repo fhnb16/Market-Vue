@@ -42,10 +42,26 @@ const storyFit = computed(() => {
       <div class="modal-close" v-on:click="setActiveStory(-1)">Close</div>
     </div>
     <div class="stories-item-content">
-      <img
-        v-bind:src="stories[activeStory].storyMedia"
-        v-bind:style="'object-fit: ' + storyFit"
-      />
+      <template
+        v-if="
+          stories[activeStory].storyMediaType == 'image' ||
+          stories[activeStory].storyMediaType == undefined ||
+          stories[activeStory].storyMediaType == ''
+        "
+      >
+        <img
+          v-bind:src="stories[activeStory].storyMedia"
+          v-bind:style="'object-fit: ' + storyFit"
+        />
+      </template>
+      <template v-if="stories[activeStory].storyMediaType == 'video'">
+        <video
+          v-bind:src="stories[activeStory].storyMedia"
+          v-bind:style="'object-fit: ' + storyFit"
+          autoplay
+          loop
+        />
+      </template>
     </div>
     <div
       class="stories-navigate left"

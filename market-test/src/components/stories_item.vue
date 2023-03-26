@@ -87,6 +87,7 @@ export default {
   position: absolute;
   border-radius: 20px;
   object-fit: cover;
+  background-color: var(--color-purple-light);
 }
 .stories_wrapper .story .story-preview-text {
   position: absolute;

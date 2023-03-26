@@ -70,6 +70,7 @@ section .section-wrapper .section-wrapper-img {
   height: 338px;
   border-radius: 24px;
   object-fit: cover;
+  background-color: var(--color-purple-light);
 }
 
 section .section-wrapper .button {
