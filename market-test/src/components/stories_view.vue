@@ -292,7 +292,7 @@ export default {
   width: 100%;
   /*max-height: 448px;*/
   object-fit: contain;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .stories-item-button {
