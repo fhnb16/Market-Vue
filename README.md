@@ -40,5 +40,38 @@
   8. Wow, ArtLebedev font))0
 
 ---
+### 3. data.json structure
+```
+{
+  "appTitle": "ИЖС маркет", // app title
+  "stories": [ // array of objects
+    {
+      "iconPreviewImage": "", // story icon preview image
+      "iconText": "Стройка через приложение", // text string on story icon
+      "storyText": "Стройка через приложение", // text string on top of story
+      "storyMedia": "", // video or image file url
+      "storyMediaType": "image", // video/image, image by default
+      "storyMediaFit": "contain", // contain - fit all image/video in center, cover - zoom image/video in center to fill all display width/height
+      "storyShowSeconds": 0, // how long story is shown, 0 or empty is 5 seconds
+      "buttonText": "Перейти", // button text
+      "buttonAction": "#",
+      "storyViewed": false
+    },
+  ],
+  "mainPageButton": {
+    "buttonText": "Есть смета? Пришлите ее нам и сделаем еще выгоднее", // main page button text
+    "buttonAction": "#"
+  },
+  "sections": [ // array of objects
+    {
+      "sectionImage": "", // section image
+      "sectionText": "Выбрать дом", // section text
+      "buttonText": "Выбрать дом", // section button text
+      "buttonAction": "#"
+    },
+  ]
+}
+```
+---
 
   [![fhnb16](https://img.shields.io/badge/Made_by_fhnb16-march_2023-dcbef0.svg?style=flat&labelColor=1a2026)](https://fhnb.ru/)
