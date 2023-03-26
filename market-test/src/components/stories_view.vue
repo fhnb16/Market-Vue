@@ -37,13 +37,14 @@ watch(activeStory, (value) => {
       stories.value[activeStory.value].storyShowSeconds == undefined ||
       stories.value[activeStory.value].storyShowSeconds == "" ||
       stories.value[activeStory.value].storyShowSeconds == 0 ||
-      stories.value[activeStory.value].storyShowSeconds == "0"
+      stories.value[activeStory.value].storyShowSeconds == "0" ||
+      stories.value[activeStory.value].storyShowSeconds == "-1" ||
+      stories.value[activeStory.value].storyShowSeconds == -1
     ) {
       time.setSeconds(time.getSeconds() + 5);
     } else {
       time.setSeconds(
-        time.getSeconds() +
-          stories.value[activeStory.value].storyShowSeconds.storyShowSeconds
+        time.getSeconds() + stories.value[activeStory.value].storyShowSeconds
       );
     }
     timer.restart(time);
@@ -61,25 +62,29 @@ onMounted(() => {
   });
 });
 
-function storyCounterProgress(index, activeStory) {
-  if (index > activeStory) {
+function storyCounterProgress(index) {
+  if (index > activeStory.value) {
     return "width: 0%";
-  } else if (index < activeStory) {
+  } else if (index < activeStory.value) {
     return "width: 100%";
   } else {
     if (
-      stories.value[activeStory].storyShowSeconds == undefined ||
-      stories.value[activeStory].storyShowSeconds == "" ||
-      stories.value[activeStory].storyShowSeconds == 0 ||
-      stories.value[activeStory].storyShowSeconds == "0"
+      stories.value[activeStory.value].storyShowSeconds == undefined ||
+      stories.value[activeStory.value].storyShowSeconds == "" ||
+      stories.value[activeStory.value].storyShowSeconds == 0 ||
+      stories.value[activeStory.value].storyShowSeconds == "0" ||
+      stories.value[activeStory.value].storyShowSeconds == "-1" ||
+      stories.value[activeStory.value].storyShowSeconds == -1
     ) {
       let mapProgress = toPercents(5 + 0.3 - timer.seconds.value, 5);
       console.log("width: " + mapProgress + "%");
       return "width: " + mapProgress + "%";
     } else {
       let mapProgress = toPercents(
-        stories.value[activeStory].storyShowSeconds + 0.3 - timer.seconds.value,
-        stories.value[activeStory].storyShowSeconds
+        stories.value[activeStory.value].storyShowSeconds +
+          0.3 -
+          timer.seconds.value,
+        stories.value[activeStory.value].storyShowSeconds
       );
       console.log("width: " + mapProgress + "%");
       return "width: " + mapProgress + "%";
@@ -103,7 +108,7 @@ function toPercents(x, y) {
         :key="'story-counter-' + index"
         class="stories-state-item"
       >
-        <span v-bind:style="storyCounterProgress(index, activeStory)"></span>
+        <span v-bind:style="storyCounterProgress(index)"></span>
       </div>
     </div>
     <div class="modal-header">

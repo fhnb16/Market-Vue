@@ -8,7 +8,7 @@
       "storyMedia": "https://test.fhnb.ru/market/api/sampleImages/story1.png",
       "storyMediaType": "image",
       "storyMediaFit": "contain",
-      "storyShowSeconds": "0",
+      "storyShowSeconds": 0,
       "buttonText": "Перейти",
       "buttonAction": "#",
       "storyViewed": false
@@ -20,7 +20,7 @@
       "storyMedia": "https://test.fhnb.ru/market/api/sampleImages/VortexTunnelTardis2.mp4",
       "storyMediaType": "video",
       "storyMediaFit": "cover",
-      "storyShowSeconds": "0",
+      "storyShowSeconds": 10,
       "buttonText": "Перейти",
       "buttonAction": "#",
       "storyViewed": false
@@ -32,7 +32,7 @@
       "storyMedia": "https://test.fhnb.ru/market/api/sampleImages/446bcbfdf6182e353d9fbe6764f76c70.png",
       "storyMediaType": "image",
       "storyMediaFit": "cover",
-      "storyShowSeconds": "0",
+      "storyShowSeconds": 0,
       "buttonText": "Перейти",
       "buttonAction": "#",
       "storyViewed": false
@@ -42,7 +42,7 @@
       "iconText": "С ИЖС выгоднее на миллионы!",
       "storyText": "С ИЖС выгоднее на миллионы!",
       "storyMedia": "https://test.fhnb.ru/market/api/sampleImages/2onQ6AKAvtc.jpg",
-      "storyShowSeconds": "0",
+      "storyShowSeconds": 0,
       "buttonText": "Перейти",
       "buttonAction": "#",
       "storyViewed": false
@@ -54,7 +54,7 @@
       "storyMedia": "https://test.fhnb.ru/market/api/sampleImages/B7lmLlc0_eY.jpg",
       "storyMediaType": "image",
       "storyMediaFit": "cover",
-      "storyShowSeconds": "0",
+      "storyShowSeconds": 0,
       "buttonText": "Перейти",
       "buttonAction": "#",
       "storyViewed": false
