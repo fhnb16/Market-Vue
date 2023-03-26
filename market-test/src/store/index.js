@@ -4,7 +4,7 @@ export default createStore({
   state: {
     content: {},
     stories: [],
-    activeStory: 0,
+    activeStory: -1,
   },
   getters: {
     getContent: (state) => state.content,
@@ -12,8 +12,11 @@ export default createStore({
     getActiveStory: (state) => state.activeStory,
   },
   actions: {
-    setActiveStory({ commit }, newVal) {
-      commit("SET_ACTIVE_STORY", newVal);
+    setActiveStory({ commit }, activeStory) {
+      commit("SET_ACTIVE_STORY", activeStory);
+    },
+    setViewedStory({ commit }, index) {
+      commit("SET_VIEWED_STORY", index);
     },
     async fetchContent({ commit }) {
       try {
@@ -42,6 +45,9 @@ export default createStore({
     },
     SET_ACTIVE_STORY(state, activeStory) {
       state.activeStory = activeStory;
+    },
+    SET_VIEWED_STORY(state, index) {
+      state.stories[index].storyViewed = true;
     },
   },
 });

@@ -10,7 +10,7 @@ import { mapActions } from "vuex";
       v-for="(story, index) in stories"
       :key="'story-' + index"
       v-bind:story="story"
-      v-on:click="setActiveStory(index + 1)"
+      v-on:click="selectStory(index)"
     />
     <StoriesView v-bind:stories="stories" />
   </div>
@@ -22,7 +22,11 @@ export default {
     stories: Array,
   },
   methods: {
-    ...mapActions(["setActiveStory"]),
+    ...mapActions(["setActiveStory", "setViewedStory"]),
+    selectStory(index) {
+      this.setViewedStory(index);
+      this.setActiveStory(index);
+    },
   },
 };
 </script>
