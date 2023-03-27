@@ -85,8 +85,6 @@ const store = useStore();
   </nav>
 </template>
 
-<script type="text/javascript"></script>
-
 <style scoped type="text/css">
 /*////////////////////
         nav

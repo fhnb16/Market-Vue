@@ -1,14 +1,23 @@
 <script type="text/javascript" setup>
 import StoriesItem from "./stories_item.vue";
 import StoriesView from "./stories_view.vue";
-import { useStore, mapActions } from "vuex";
+import { useStore } from "vuex";
 import { computed } from "vue";
 
 const store = useStore();
 
+const stories = computed(() => {
+  return store.state.stories;
+});
+
 const overflowState = computed(() => {
   return store.state.modalVisible || store.state.activeStory != -1;
 });
+
+const selectStory = function (index) {
+  store.dispatch("setViewedStory", index);
+  store.dispatch("setActiveStory", index);
+};
 </script>
 
 <template>
@@ -25,21 +34,6 @@ const overflowState = computed(() => {
     <StoriesView v-bind:stories="stories" />
   </div>
 </template>
-
-<script type="text/javascript">
-export default {
-  props: {
-    stories: Array,
-  },
-  methods: {
-    ...mapActions(["setActiveStory", "setViewedStory"]),
-    selectStory(index) {
-      this.setViewedStory(index);
-      this.setActiveStory(index);
-    },
-  },
-};
-</script>
 
 <style scoped type="text/css">
 /*////////////////////

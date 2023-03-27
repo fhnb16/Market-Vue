@@ -20,8 +20,6 @@ const store = useStore();
   </div>
 </template>
 
-<script type="text/javascript"></script>
-
 <style scoped type="text/css">
 /*////////////////////
     modal contact

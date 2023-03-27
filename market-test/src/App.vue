@@ -1,7 +1,3 @@
-<template>
-  <MainPage />
-</template>
-
 <script>
 import MainPage from "./views/MainPage.vue";
 
@@ -12,6 +8,10 @@ export default {
   },
 };
 </script>
+
+<template>
+  <MainPage />
+</template>
 
 <style lang="scss" type="text/css">
 * {

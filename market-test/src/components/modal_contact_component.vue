@@ -36,8 +36,6 @@ function locate(url) {
   </Modal>
 </template>
 
-<script type="text/javascript"></script>
-
 <style scoped type="text/css">
 /*////////////////////
     modal contact

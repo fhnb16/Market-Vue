@@ -1,5 +1,3 @@
-<script type="text/javascript" setup></script>
-
 <template>
   <div class="button">
     <slot />

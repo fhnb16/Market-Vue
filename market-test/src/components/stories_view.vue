@@ -1,7 +1,7 @@
 <script type="text/javascript" setup>
 import Button from "./button_component.vue";
 import { computed, watch, watchEffect, onMounted } from "vue";
-import { useStore, mapActions } from "vuex";
+import { useStore } from "vuex";
 import { useTimer } from "vue-timer-hook";
 
 const store = useStore();
@@ -120,7 +120,12 @@ function toPercents(x, y) {
     </div>
     <div class="modal-header">
       <span> {{ stories[activeStory].storyText }} </span>
-      <div class="modal-close" v-on:click="setActiveStory(-1)">Close</div>
+      <div
+        class="modal-close"
+        v-on:click="store.dispatch('setActiveStory', -1)"
+      >
+        Close
+      </div>
     </div>
     <div class="stories-item-content">
       <template
@@ -158,7 +163,7 @@ function toPercents(x, y) {
           if (activeStory - 1 !== -1) {
             store.dispatch('setViewedStory', activeStory - 1);
           }
-          setActiveStory(activeStory - 1);
+          store.dispatch('setActiveStory', activeStory - 1);
         }
       "
     ></div>
@@ -169,7 +174,7 @@ function toPercents(x, y) {
           if (activeStory + 1 !== stories.length) {
             store.dispatch('setViewedStory', activeStory + 1);
           }
-          setActiveStory(activeStory + 1);
+          store.dispatch('setActiveStory', activeStory + 1);
         }
       "
     ></div>
@@ -180,18 +185,6 @@ function toPercents(x, y) {
     </div>
   </div>
 </template>
-
-<script type="text/javascript">
-export default {
-  props: {
-    story: Object,
-  },
-  methods: {
-    ...mapActions(["setActiveStory"]),
-  },
-  computed: {},
-};
-</script>
 
 <style scoped type="text/css">
 /*////////////////////
