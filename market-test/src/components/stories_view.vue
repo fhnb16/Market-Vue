@@ -394,7 +394,7 @@ export default {
   }
 }
 
-@media (max-height: 666px) {
+/*@media (max-height: 666px) {
   .stories-view-wrapper .stories-item-content {
     height: 80%;
     margin-top: 10%;
@@ -402,5 +402,5 @@ export default {
   .stories-view-wrapper .stories-item-content video {
     max-height: 100%;
   }
-}
+}*/
 </style>
