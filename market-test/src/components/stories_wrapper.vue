@@ -1,11 +1,21 @@
 <script type="text/javascript" setup>
 import StoriesItem from "./stories_item.vue";
 import StoriesView from "./stories_view.vue";
-import { mapActions } from "vuex";
+import { useStore, mapActions } from "vuex";
+import { computed } from "vue";
+
+const store = useStore();
+
+const overflowState = computed(() => {
+  return store.state.modalVisible || store.state.activeStory != -1;
+});
 </script>
 
 <template>
-  <div class="stories_wrapper">
+  <div
+    class="stories_wrapper"
+    v-bind:class="overflowState ? 'hideOverlay' : ''"
+  >
     <StoriesItem
       v-for="(story, index) in stories"
       :key="'story-' + index"
@@ -45,5 +55,9 @@ export default {
   padding-bottom: 6px;
   display: inline-block;
   text-align: center;
+}
+
+.stories_wrapper.hideOverlay {
+  overflow: hidden;
 }
 </style>
