@@ -95,5 +95,8 @@ section .section-wrapper .button {
   section .section-wrapper {
     width: unset;
   }
+  section {
+    margin: unset;
+  }
 }
 </style>
