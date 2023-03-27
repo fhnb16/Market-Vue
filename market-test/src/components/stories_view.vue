@@ -24,6 +24,22 @@ const storyFit = computed(() => {
   }
 });
 
+const storyShowTimeDefault = computed(() => {
+  if (
+    store.state.stories[store.state.activeStory].storyShowSeconds ==
+      undefined ||
+    store.state.stories[store.state.activeStory].storyShowSeconds == "" ||
+    store.state.stories[store.state.activeStory].storyShowSeconds == 0 ||
+    store.state.stories[store.state.activeStory].storyShowSeconds == "0" ||
+    store.state.stories[store.state.activeStory].storyShowSeconds == "-1" ||
+    store.state.stories[store.state.activeStory].storyShowSeconds == -1
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
 const time = new Date();
 time.setSeconds(time.getSeconds() + 5); // 5 seconds timer
 const timer = useTimer(time, false);
@@ -34,14 +50,7 @@ watch(activeStory, (value) => {
   }
   if (value != store.state.stories.length && value != -1) {
     const time = new Date();
-    if (
-      stories.value[activeStory.value].storyShowSeconds == undefined ||
-      stories.value[activeStory.value].storyShowSeconds == "" ||
-      stories.value[activeStory.value].storyShowSeconds == 0 ||
-      stories.value[activeStory.value].storyShowSeconds == "0" ||
-      stories.value[activeStory.value].storyShowSeconds == "-1" ||
-      stories.value[activeStory.value].storyShowSeconds == -1
-    ) {
+    if (storyShowTimeDefault.value) {
       time.setSeconds(time.getSeconds() + 5);
     } else {
       time.setSeconds(
@@ -69,14 +78,7 @@ function storyCounterProgress(index) {
   } else if (index < activeStory.value) {
     return "width: 100%";
   } else {
-    if (
-      stories.value[activeStory.value].storyShowSeconds == undefined ||
-      stories.value[activeStory.value].storyShowSeconds == "" ||
-      stories.value[activeStory.value].storyShowSeconds == 0 ||
-      stories.value[activeStory.value].storyShowSeconds == "0" ||
-      stories.value[activeStory.value].storyShowSeconds == "-1" ||
-      stories.value[activeStory.value].storyShowSeconds == -1
-    ) {
+    if (storyShowTimeDefault.value) {
       let mapProgress = toPercents(5 + 0.3 - timer.seconds.value, 5);
       return "width: " + mapProgress + "%";
     } else {
