@@ -15,11 +15,12 @@ const activeStory = computed(() => {
 const storyFit = computed(() => {
   if (
     store.state.stories[store.state.activeStory].storyMediaFit == undefined ||
-    store.state.stories[store.state.activeStory].storyMediaFit == ""
+    store.state.stories[store.state.activeStory].storyMediaFit == "" ||
+    store.state.stories[store.state.activeStory].storyMediaFit == "cover"
   ) {
     return "cover";
   } else {
-    return store.state.stories[store.state.activeStory].storyMediaFit;
+    return "contain; min-height:unset";
   }
 });
 
@@ -99,6 +100,12 @@ function toPercents(x, y) {
   <div
     class="stories-view-wrapper"
     v-if="activeStory >= 0 && activeStory < stories.length"
+    v-bind:style="
+      stories[activeStory].storyBackground != undefined ||
+      stories[activeStory].storyBackground != ''
+        ? 'background:' + stories[activeStory].storyBackground
+        : ''
+    "
   >
     <div class="stories-state">
       <div
@@ -192,8 +199,9 @@ export default {
 .stories-view-wrapper {
   position: fixed;
   inset: 0;
-  background: rgba(128, 128, 128, 0.9);
+  background-color: rgba(128, 128, 128, 0.9);
   background-color: var(--color-purple);
+  background: hsla(0, 0%, 50%, 0.9);
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -287,6 +295,7 @@ export default {
   justify-content: center;
   flex-wrap: nowrap;
   height: 100%;
+  width: 100%;
 }
 
 .stories-item-content img,
