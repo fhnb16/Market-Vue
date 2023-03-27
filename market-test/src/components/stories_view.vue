@@ -228,6 +228,8 @@ export default {
   overflow-wrap: break-word;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .stories-view-wrapper .modal-header .modal-close {
