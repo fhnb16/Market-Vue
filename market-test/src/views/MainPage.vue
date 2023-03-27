@@ -33,15 +33,6 @@ onBeforeMount(() => {
 onMounted(() => {
   console.clear();
 });
-document.addEventListener(
-  "touchmove",
-  function (event) {
-    if (event.scale !== 1) {
-      event.preventDefault();
-    }
-  },
-  false
-);
 const overflowState = computed(() => {
   return store.state.modalVisible || store.state.activeStory != -1;
 });
