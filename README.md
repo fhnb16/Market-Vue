@@ -37,7 +37,8 @@
   5. Store data in Vuex
   6. Can be pinned on ios home screen (PWA)
   7. Stories can contain image or video
-  8. Wow, ArtLebedev font))0
+  8. Compact stories view on desktop/tablet
+  9. Wow, ArtLebedev font))0
 
 ---
 ### 3. data.json structure
