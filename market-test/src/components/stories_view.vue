@@ -379,7 +379,7 @@ export default {
   media screen width
 ////////////////////*/
 
-@media (min-width: 666px) {
+@media (min-width: 768px) {
   .stories-view-wrapper {
     display: flex;
     flex-direction: row;
@@ -391,6 +391,16 @@ export default {
   .stories-view-wrapper video,
   .stories-view-wrapper .stories-item-content {
     border-radius: 6px;
+  }
+}
+
+@media (max-height: 666px) {
+  .stories-view-wrapper .stories-item-content {
+    height: 80%;
+    margin-top: 10%;
+  }
+  .stories-view-wrapper .stories-item-content video {
+    max-height: 100%;
   }
 }
 </style>

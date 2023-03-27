@@ -1,5 +1,5 @@
 <script type="text/javascript" setup>
-import { onBeforeMount, onMounted, computed } from "vue";
+import { onBeforeMount, onMounted, computed, watch } from "vue";
 import { useStore } from "vuex";
 
 import StoriesWrapper from "../components/stories_wrapper.vue";
@@ -42,14 +42,22 @@ document.addEventListener(
   },
   false
 );
+const overflowState = computed(() => {
+  return store.state.modalVisible || store.state.activeStory != -1;
+});
+
+watch(overflowState, (value) => {
+  console.log(value);
+  if (value) {
+    document.body.classList.add("overflow-disable");
+  } else {
+    document.body.classList.remove("overflow-disable");
+  }
+});
 </script>
 
 <template>
-  <div
-    class="app-wrapper"
-    id="app-wrapper"
-    v-bind:class="modalVisible ? 'overflow-disable' : ''"
-  >
+  <div class="app-wrapper" id="app-wrapper">
     <h1 class="logo">
       {{ content["appTitle"] }}
     </h1>
@@ -85,7 +93,7 @@ document.addEventListener(
     env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
-.app-wrapper.overflow-disable {
+body.overflow-disable {
   overflow: hidden;
 }
 
