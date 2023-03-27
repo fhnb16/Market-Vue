@@ -91,7 +91,7 @@ section .section-wrapper .button {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 375px) {
   section .section-wrapper {
     width: unset;
   }
