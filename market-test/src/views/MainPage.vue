@@ -47,7 +47,6 @@ const overflowState = computed(() => {
 });
 
 watch(overflowState, (value) => {
-  console.log(value);
   if (value) {
     document.body.classList.add("overflow-disable");
   } else {
