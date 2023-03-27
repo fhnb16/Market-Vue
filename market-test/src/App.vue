@@ -45,7 +45,7 @@ export default {
 ::-webkit-scrollbar {
   height: 12px;
   width: 12px;
-  z-index: 12;
+  z-index: 8;
   background: transparent;
   overflow: visible;
 }
@@ -59,7 +59,7 @@ export default {
 ::-webkit-scrollbar-thumb {
   width: 4px;
   min-height: 32px;
-  z-index: 12;
+  z-index: 8;
   background-image: none;
   background-color: rgba(67, 73, 83, 0.6);
   background-clip: padding-box;
