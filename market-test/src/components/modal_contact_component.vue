@@ -6,7 +6,7 @@ function locate(url) {
 </script>
 
 <template>
-  <Modal>
+  <Modal headerText="Пообщаться">
     <ul>
       <li v-on:click="locate('tg://resolve?domain=fhnb16')">
         <span>Позвонить</span

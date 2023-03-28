@@ -5,7 +5,8 @@ import { useStore } from "vuex";
 import StoriesWrapper from "../components/stories_wrapper.vue";
 import Button from "../components/button_component.vue";
 import Section from "../components/section_component.vue";
-import ModalContact from "../components/modal_contact_component.vue";
+import Message from "../components/modal_message_component.vue";
+import Contacts from "../components/modal_contact_component.vue";
 import NavMenu from "../components/navMenu_component.vue";
 
 const store = useStore();
@@ -34,7 +35,7 @@ onMounted(() => {
   console.clear();
 });
 const overflowState = computed(() => {
-  return store.state.modalVisible || store.state.activeStory != -1;
+  return store.state.modalVisible != 0 || store.state.activeStory != -1;
 });
 
 watch(overflowState, (value) => {
@@ -54,10 +55,11 @@ watch(overflowState, (value) => {
     <StoriesWrapper v-bind:stories="stories" />
     <Button
       class="button-arrow center"
-      v-on:click="store.dispatch('setModalVisibility', true)"
+      v-on:click="store.dispatch('setModalVisibility', 1)"
     >
       {{ content.mainPageButton["buttonText"] }}
     </Button>
+    <Contacts :visibility="modalVisible == 1" />
     <div class="sections">
       <Section
         v-for="(section, index) in content.sections"
@@ -66,17 +68,25 @@ watch(overflowState, (value) => {
         v-bind:index="index"
       />
     </div>
+    <Button
+      class="wide center"
+      v-on:click="store.dispatch('setModalVisibility', 2)"
+    >
+      Press Me
+    </Button>
+    <Message headerText="Message window" :visibility="modalVisible == 2">
+      Hello world
+    </Message>
     <span class="break"></span>
-    <NavMenu />
-    <ModalContact />
     <div
       class="background-blur"
-      v-bind:class="modalVisible || activeStory != -1 ? 'active' : ''"
+      v-bind:class="modalVisible != 0 || activeStory != -1 ? 'active' : ''"
       v-on:click="
         store.dispatch('setActiveStory', -1);
         store.dispatch('setModalVisibility', false);
       "
     ></div>
+    <NavMenu />
   </div>
 </template>
 

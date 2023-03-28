@@ -1,19 +1,20 @@
 <script type="text/javascript" setup>
-import { computed } from "vue";
+import { defineProps } from "vue";
 import { useStore } from "vuex";
 const store = useStore();
-const modalVisible = computed(() => {
-  return store.state.modalVisible;
+const props = defineProps({
+  headerText: String,
+  visibility: Boolean,
 });
 </script>
 
 <template>
-  <div class="modal" v-bind:class="modalVisible ? 'active' : ''">
+  <div class="modal" v-bind:class="visibility ? 'active' : ''">
     <div class="modal-header">
-      <h2>Пообщаться</h2>
+      <h2>{{ props.headerText }}</h2>
       <div
         class="modal-close"
-        v-on:click="store.dispatch('setModalVisibility', false)"
+        v-on:click="store.dispatch('setModalVisibility', 0)"
       >
         Close
       </div>
@@ -34,6 +35,9 @@ const modalVisible = computed(() => {
   left: 0;
   right: 0;
   bottom: -100vh;
+  min-height: 120px;
+  max-height: 90vh;
+  overflow: auto;
   background-color: var(--color-gray-light);
   backdrop-filter: blur(40px);
   -moz-backdrop-filter: blur(40px);

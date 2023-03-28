@@ -12,17 +12,6 @@ const stories = computed(() => {
 const activeStory = computed(() => {
   return store.state.activeStory;
 });
-/*const storyFit = computed(() => {
-  if (
-    store.state.stories[store.state.activeStory].storyMediaFit == undefined ||
-    store.state.stories[store.state.activeStory].storyMediaFit == "" ||
-    store.state.stories[store.state.activeStory].storyMediaFit == "cover"
-  ) {
-    return "cover";
-  } else {
-    return "contain; min-height:unset";
-  }
-});*/
 
 function storyFit(storyItem) {
   if (

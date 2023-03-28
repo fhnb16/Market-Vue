@@ -6,7 +6,7 @@ export default createStore({
     stories: [],
     activeStory: -1,
     timerCountdown: 0,
-    modalVisible: false,
+    modalVisible: 0,
   },
   getters: {
     getContent: (state) => state.content,
@@ -63,11 +63,7 @@ export default createStore({
       state.stories[index].storyViewed = true;
     },
     SET_MODAL_VISIBILITY(state, visibility) {
-      if (visibility) {
-        state.modalVisible = true;
-      } else {
-        state.modalVisible = false;
-      }
+      state.modalVisible = visibility;
     },
   },
 });

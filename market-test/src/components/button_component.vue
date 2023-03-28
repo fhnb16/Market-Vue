@@ -17,7 +17,7 @@
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   max-width: 360px;
-  width: calc(100% - 40px);
+  width: fit-content;
   margin: 6px;
   font-style: normal;
   font-weight: 700;
@@ -25,6 +25,10 @@
   line-height: 129%;
   position: relative;
   cursor: pointer;
+}
+
+.button.wide {
+  width: unset;
 }
 
 .button,
@@ -42,6 +46,7 @@
   border-radius: 60px;
   text-align: center;
   margin: 0 auto;
+  width: calc(100% - 40px);
 }
 
 .button.section-round:hover,
