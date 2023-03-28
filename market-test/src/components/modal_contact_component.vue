@@ -35,7 +35,7 @@ function locate(url) {
     modal contact
 ////////////////////*/
 
-.modal-contact .modal-body ul {
+.modal .modal-body ul {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@ function locate(url) {
   margin-bottom: 32px;
 }
 
-.modal-contact .modal-body ul > li {
+.modal .modal-body ul > li {
   height: 48px;
   display: flex;
   justify-content: space-between;
@@ -62,31 +62,31 @@ function locate(url) {
   border-bottom: 1px solid var(--color-gray-dark);
 }
 
-.modal-contact .modal-body ul > li,
-.modal-contact .modal-body ul > li * {
+.modal .modal-body ul > li,
+.modal .modal-body ul > li * {
   cursor: pointer;
 }
 
-.modal-contact .modal-body ul > li * {
+.modal .modal-body ul > li * {
   pointer-events: none;
 }
 
-.modal-contact .modal-body ul > li:first-child {
+.modal .modal-body ul > li:first-child {
   border-radius: 13px 13px 0 0;
 }
 
-.modal-contact .modal-body ul > li:last-child {
+.modal .modal-body ul > li:last-child {
   border-radius: 0 0 13px 13px;
   border-bottom: 1px solid transparent;
 }
 
-.modal-contact .modal-body ul > li img {
+.modal .modal-body ul > li img {
   width: 24px;
   height: 24px;
   object-fit: contain;
 }
 
-.modal-contact .modal-body ul > li span {
+.modal .modal-body ul > li span {
   font-family: var(--text-font-rich), sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -94,11 +94,11 @@ function locate(url) {
   line-height: 129%;
 }
 
-.modal-contact .modal-body ul > li:hover {
+.modal .modal-body ul > li:hover {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
 }
 
-.modal-contact .modal-body ul > li:active {
+.modal .modal-body ul > li:active {
   box-shadow: inset 0 2px 16px rgba(0, 0, 0, 0.1);
 }
 </style>

@@ -91,12 +91,12 @@ function storyCounterProgress(index) {
     return "width: 100%";
   } else {
     if (storyShowTimeDefault.value) {
-      let mapProgress = toPercents(5 + 0.3 - timer.seconds.value, 5);
+      let mapProgress = toPercents(5 + 1 - timer.seconds.value, 5);
       return "width: " + mapProgress + "%";
     } else {
       let mapProgress = toPercents(
         stories.value[activeStory.value].storyShowSeconds +
-          0.3 -
+          1 -
           timer.seconds.value,
         stories.value[activeStory.value].storyShowSeconds
       );
@@ -314,7 +314,7 @@ export default {
   overflow: hidden;
   width: 0;
   border-radius: 6px;
-  transition: all 1s ease;
+  transition: width 2s ease;
 }
 
 .stories-item-content {
@@ -326,7 +326,7 @@ export default {
   position: absolute;
   height: 100%;
   width: 100%;
-  transition: opacity 256ms ease;
+  transition: opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   opacity: 0;
   z-index: -1;
 }

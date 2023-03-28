@@ -71,7 +71,7 @@ watch(overflowState, (value) => {
     <ModalContact />
     <div
       class="background-blur"
-      v-if="modalVisible || activeStory != -1"
+      v-bind:class="modalVisible || activeStory != -1 ? 'active' : ''"
       v-on:click="
         store.dispatch('setActiveStory', -1);
         store.dispatch('setModalVisibility', false);
@@ -104,6 +104,12 @@ svg {
   background: rgba(9, 9, 9, 0.6);
   backdrop-filter: blur(1px);
   -moz-backdrop-filter: blur(1px);
+  opacity: 0;
+  z-index: -1;
+}
+
+.background-blur.active {
+  opacity: 1;
   z-index: 6;
 }
 
