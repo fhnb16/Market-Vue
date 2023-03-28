@@ -42,7 +42,7 @@ const props = defineProps({
   backdrop-filter: blur(40px);
   -moz-backdrop-filter: blur(40px);
   border-radius: 16px 16px 0px 0px;
-  z-index: 8;
+  z-index: 12;
   transition: opacity 512ms cubic-bezier(0.25, 0.8, 0.25, 1),
     bottom 256ms cubic-bezier(0.25, 0.8, 0.25, 1);
   opacity: 0;

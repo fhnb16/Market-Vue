@@ -120,7 +120,7 @@ svg {
 
 .background-blur.active {
   opacity: 1;
-  z-index: 9;
+  z-index: 8;
 }
 
 h1 {
