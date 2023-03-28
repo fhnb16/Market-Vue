@@ -1,6 +1,6 @@
 <script type="text/javascript" setup>
 import StoriesItem from "./stories_item.vue";
-import StoriesView from "./stories_view.vue";
+import StoriesView from "./stories_view2.vue";
 import { useStore } from "vuex";
 import { computed } from "vue";
 

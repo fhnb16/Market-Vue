@@ -69,7 +69,14 @@ watch(overflowState, (value) => {
     <span class="break"></span>
     <NavMenu />
     <ModalContact />
-    <div class="background-blur" v-if="modalVisible || activeStory != -1"></div>
+    <div
+      class="background-blur"
+      v-if="modalVisible || activeStory != -1"
+      v-on:click="
+        store.dispatch('setActiveStory', -1);
+        store.dispatch('setModalVisibility', false);
+      "
+    ></div>
   </div>
 </template>
 

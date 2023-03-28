@@ -1,10 +1,14 @@
 <script type="text/javascript" setup>
+import { computed } from "vue";
 import { useStore } from "vuex";
 const store = useStore();
+const modalVisible = computed(() => {
+  return store.state.modalVisible;
+});
 </script>
 
 <template>
-  <div class="modal-contact">
+  <div class="modal-contact" v-bind:class="modalVisible ? 'active' : ''">
     <div class="modal-header">
       <h2>Пообщаться</h2>
       <div
@@ -27,14 +31,21 @@ const store = useStore();
 
 .modal-contact {
   position: fixed;
-  bottom: 0;
   left: 0;
   right: 0;
+  bottom: -100vh;
   background-color: var(--color-gray-light);
   backdrop-filter: blur(40px);
   -moz-backdrop-filter: blur(40px);
   border-radius: 16px 16px 0px 0px;
   z-index: 8;
+  transition: opacity 512ms ease, bottom 256ms ease-in-out;
+  opacity: 0;
+}
+
+.modal-contact.active {
+  opacity: 1;
+  bottom: 0;
 }
 
 /*////////////////////

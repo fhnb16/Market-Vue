@@ -1,18 +1,12 @@
 <script type="text/javascript" setup>
-import { computed } from "vue";
-import { useStore } from "vuex";
 import Modal from "./modal_component.vue";
-const store = useStore();
-const modalVisible = computed(() => {
-  return store.state.modalVisible;
-});
 function locate(url) {
   window.location.href = url;
 }
 </script>
 
 <template>
-  <Modal v-if="modalVisible">
+  <Modal>
     <ul>
       <li v-on:click="locate('tg://resolve?domain=fhnb16')">
         <span>Позвонить</span
