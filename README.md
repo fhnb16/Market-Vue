@@ -1,9 +1,9 @@
 # Market-Vue
 
-[![Vue 3.2.47](https://img.shields.io/badge/Vue-3.2.47-1f75fe.svg?style=flat&labelColor=2e3943)](https://vuejs.org/guide/)
-[![Vue CLI 5.0.8](https://img.shields.io/badge/Vue_CLI-5.0.8-1f75fe.svg?style=flat&labelColor=2e3943)](https://cli.vuejs.org/)
-[![Vuex 4.1.0](https://img.shields.io/badge/Vuex-4.1.0-1f75fe.svg?style=flat&labelColor=2e3943)](https://v4.vuex.vuejs.org/)
-[![vue-timer-hook 1.0.66](https://img.shields.io/badge/vue--timer--hook-1.0.66-1f75fe.svg?style=flat&labelColor=2e3943)](https://github.com/riderx/vue-timer-hook)
+[![Vue 3.2.47](https://img.shields.io/badge/Vue-3.2.47-1f75fe.svg?style=plastic&labelColor=2e3943)](https://vuejs.org/guide/)
+[![Vue CLI 5.0.8](https://img.shields.io/badge/Vue_CLI-5.0.8-1f75fe.svg?style=plastic&labelColor=2e3943)](https://cli.vuejs.org/)
+[![Vuex 4.1.0](https://img.shields.io/badge/Vuex-4.1.0-1f75fe.svg?style=plastic&labelColor=2e3943)](https://v4.vuex.vuejs.org/)
+[![vue-timer-hook 1.0.66](https://img.shields.io/badge/vue--timer--hook-1.0.66-1f75fe.svg?style=plastic&labelColor=2e3943)](https://github.com/riderx/vue-timer-hook)
 
 ## ИЖС Маркет, верстка + vue
 
