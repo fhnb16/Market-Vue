@@ -24,8 +24,10 @@
   3. Open terminal, go to repository folder (example: `cd Z:\\Git\Market\market-test`).
   4. Install Vue Cli with command `npm install -g @vue/cli@5.0.8`.
   5. Install dependences with `npm install --legacy-peer-deps`.
-  6. Type `npm run serve` to build and run local server, now you can visit website with url: `127.0.0.1:8080` or `localhost:8080`.
-  7. You may also build project to distribute (upload to webserver) with command `npm run build`.
+  6. Place file data.json from src/assets/api to webserver. Place .htaccess in same place if data.json and website not at same webserver to prevent CORS security errors.
+  7. Change path to your data.json file in file src/store/index.js.
+  8. Type `npm run serve` to build and run local server, now you can visit website with url: `127.0.0.1:8080` or `localhost:8080`.
+  9. You may also build project to distribute (upload to webserver) with command `npm run build`.
 
 ---
 ### 2. Features
