@@ -1,5 +1,5 @@
 <script type="text/javascript" setup>
-import { onBeforeMount, onMounted, computed, watch } from "vue";
+import { onBeforeMount, onMounted, computed, watch, nextTick } from "vue";
 import { useStore } from "vuex";
 
 import StoriesWrapper from "../components/stories_wrapper.vue";
@@ -10,12 +10,9 @@ import Contacts from "../components/modal_contact_component.vue";
 import NavMenu from "../components/navMenu_component.vue";
 
 const store = useStore();
-/*const getContent = computed(() => {
-  return store.getters.getContent;
+onBeforeMount(() => {
+  store.dispatch("fetchContent");
 });
-const getStories = computed(() => {
-  return store.getters.getStories;
-});*/
 const content = computed(() => {
   return store.state.content;
 });
@@ -28,10 +25,8 @@ const modalVisible = computed(() => {
 const activeStory = computed(() => {
   return store.state.activeStory;
 });
-onBeforeMount(() => {
-  store.dispatch("fetchContent");
-});
-onMounted(() => {
+onMounted(async () => {
+  await nextTick();
   console.clear();
 });
 const overflowState = computed(() => {
@@ -56,8 +51,9 @@ watch(overflowState, (value) => {
     <Button
       class="button-arrow center"
       v-on:click="store.dispatch('setModalVisibility', 1)"
+      v-if="content.mainPageButton != undefined"
     >
-      {{ content.mainPageButton["buttonText"] }}
+      {{ content.mainPageButton.buttonText }}
     </Button>
     <Contacts :visibility="modalVisible == 1" />
     <div class="sections">

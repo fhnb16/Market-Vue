@@ -2,6 +2,11 @@
   "name": "market-test",
   "version": "0.1.0",
   "private": true,
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off"
+    }
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

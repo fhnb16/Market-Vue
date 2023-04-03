@@ -6,6 +6,29 @@ import { computed } from "vue";
 
 const store = useStore();
 
+/*onBeforeMount(async () => {
+  await nextTick();
+  let queryString = window.location.search;
+  let queryURL = new URLSearchParams(queryString);
+  if (
+    queryURL.get("story") &&
+    queryURL.get("story") != undefined &&
+    queryURL.get("story") > -1 &&
+    queryURL.get("story") > "-1" &&
+    queryURL.get("story") != "" &&
+    !isNaN(queryURL.get("story"))
+  ) {
+    store.dispatch("setViewedStory", queryURL.get("story"));
+    store.dispatch("setActiveStory", queryURL.get("story"));
+  }
+});*/
+
+/*watch(overflowState, (value) => {
+  if () {
+
+  }
+});*/
+
 const stories = computed(() => {
   return store.state.stories;
 });
@@ -31,7 +54,7 @@ const selectStory = function (index) {
       v-bind:story="story"
       v-on:click="selectStory(index)"
     />
-    <StoriesView v-bind:stories="stories" />
+    <StoriesView />
   </div>
 </template>
 
